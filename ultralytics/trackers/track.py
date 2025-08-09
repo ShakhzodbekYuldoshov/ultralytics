@@ -82,6 +82,7 @@ def on_predict_postprocess_end(predictor: object, persist: bool = False) -> None
         >>> predictor = YourPredictorClass()
         >>> on_predict_postprocess_end(predictor, persist=True)
     """
+    print("hello world")
     is_obb = predictor.args.task == "obb"
     is_stream = predictor.dataset.mode == "stream"
     for i, result in enumerate(predictor.results):
